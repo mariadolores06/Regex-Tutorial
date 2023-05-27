@@ -8,7 +8,6 @@ The regex below can be used to validate a URL and has been broken down by its co
 
 <code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/<code>
 
-
 ## Table of Contents
 
 - [Anchors](#anchors)
@@ -32,29 +31,39 @@ They show where the text starts and ends in the expression. We are asking the se
 
 ### Quantifiers
 
-<code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/<code>
+Quantifiers are used to define the number of times a given expression may be identified. 
+
+<code>?<code> matches the token 0-1 times.
+    This character is optional, but the regex will still look to see if it's present. 
+<code>(https?:\/\/)?<code> matches the characters: https://
+
+<code>*<code> matches the token between 0 and unlimited times. 
+    This part allows for any combination of characters within the [ ] and it can be repeated any number of times. This will be any text that comes after the top level domain.
+Found in the regex: 
+<code>([\/\w \.-]*)*<code>
+
+<code>+<code> matches the token between 1 and unlimited times.
+    This part of the regex is looking for any of the charcters specified in [ ] and it is required to match at least one of those characters. 
+Found in the regex: <code>([\da-z\.-]+)<code>
+
+<code>{2,6}<code> matches the token betwen 2 and 6 times. 
+    The numbers inside {} will determine what the regex will match. If there is only one number, then the regex will only match charcters that specified number of times. This portion would translate to the top level domain part of the URL. (.com, .edu, .org, etc.) Most top level domains are between two and six characters long.
+Found in the regex: <code>([a-z\.]{2,6})<code>
 
 
 ### Grouping Constructs
+    Grouping in a regex is done by simply wrapping the portion of the regex that you'd like to group in parenthesis. Grouping a part of the regex allows you to apply a quantifier to the group.
+Found in the regex: <code>/^(https?:\/\/)?<code>
 
-<code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/<code>
-
-
-### Bracket Expressions
-
-<code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/<code>
-
+### Bracket Expressions / OR Operator
+    A bracket expression is a list of characters enclosed by two square brackets. 
+Found in the regex: <code>[\da-z\.-]<code> 
+    This expression matches for any digits <code>\d<code> OR any characters between a and z <code>a-z<code> OR any '.'<code>\.<code> OR any '-' <code>-<code>. 
 
 ### Character Classes
 
-<code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/<code>
-
-
-### The OR Operator
-
-### Flags
-
-### Character Escapes
+    The main charcater classes in this regex include: <code>\d<code> which looks for any digit and <code>\w<code> which looks for any alphanumeric character. 
+Found in the regex: <code>[\da-z\.-]<code> <code>[\/\w \.-]<code>
 
 ## Author
 

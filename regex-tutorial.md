@@ -67,4 +67,7 @@ Found in the regex: <code>[\da-z\.-]<code> <code>[\/\w \.-]<code>
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Maria and I am a student at Northwestern Univeristy's Coding Bootcamp. 
+
+Please [email me with any questions](mailto:mrodriguez.psychology@gmail.com) or 
+visit my [Github Profile](https://github.com/mariadolores06).

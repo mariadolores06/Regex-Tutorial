@@ -15,6 +15,7 @@ The regex below can be used to validate a URL and has been broken down by its co
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions / OR Operator](#bracket-expressions)
 - [Character Classes](#character-classes)
+- [Author](#author)
 
 ## Regex Components
 

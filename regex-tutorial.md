@@ -13,11 +13,8 @@ The regex below can be used to validate a URL and has been broken down by its co
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
-- [Bracket Expressions](#bracket-expressions)
+- [Bracket Expressions / OR Operator](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
-- [Flags](#flags)
-- [Character Escapes](#character-escapes)
 
 ## Regex Components
 
@@ -49,7 +46,6 @@ Found in the regex: <code>([\da-z\.-]+)<code>
 <code>{2,6}<code> matches the token betwen 2 and 6 times. 
     The numbers inside {} will determine what the regex will match. If there is only one number, then the regex will only match charcters that specified number of times. This portion would translate to the top level domain part of the URL. (.com, .edu, .org, etc.) Most top level domains are between two and six characters long.
 Found in the regex: <code>([a-z\.]{2,6})<code>
-
 
 ### Grouping Constructs
     Grouping in a regex is done by simply wrapping the portion of the regex that you'd like to group in parenthesis. Grouping a part of the regex allows you to apply a quantifier to the group.
